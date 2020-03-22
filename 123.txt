@@ -1,0 +1,76 @@
+Generator zhai leruite
+yield	yade
+null	nang
+iterator 	en te run te
+Math	maisi
+async	e sen ke
+await	e wei te
+promise	puraomeizi
+Person	po sen
+webpack	wai 博 pa ke
+cnpm install bootstrap
+webpack-cli --version全写 webpack-cli -v缩写
+export	enkesipaote
+default	difaote
+export	default单个输出
+ceil	向上取整
+floor	向下取整
+staged  sitenzhi暂存区
+master	分支ma si te
+Git -bash 
+不要在c盘创建进入Git -bash                
+	命令行
+mkdit  learngit  创建文件夹 learngit就是创建的文件夹
+在learngit 里进入Git -bash     
+git init	创建仓库
+出现.git文件是仓库
+ls -ah 看见隐藏仓库ls是Ls
+psd	显示目录 （路径）
+创建文件夹readme.txt文件 （一定要放到learngit目录下（子目录也行），因为这是一个Git仓库，放到其他地方Git再厉害也找不到这个文件）
+
+git add readme.txt告诉Git，把‘readme.txt’文件添加到仓库：
+
+git commit -m "wrote a readme file"把文件提交到仓库：-m命令双引号里面的是说明注释的意思可以写中文
+1 file changed：1个文件被改动（我们新添加的readme.txt文件）；2 insertions：插入了两行内容（readme.txt有两行内容）。
+小结
+初始化一个Git仓库，使用git init命令。
+添加文件到Git仓库，分两步：
+使用命令git add <file>，注意，可反复多次使用，添加多个文件；
+使用命令git commit -m <message>，完成。
+
+修改文件
+运行git status命令看结果掌握仓库当前的状态
+git add*txt /add/css将所有扩展名是txt /add/css的文件提交 
+
+git diff顾名思义就是查看difference 查看被修改过的内容
+
+git log命令显示从最近到最远的提交日志
+git log --pretty=oneline如果嫌输出信息太多，看得眼花缭乱的，可以试试加上--pretty=oneline参数
+
+git reset --hard HEAD^
+首先，Git必须知道当前版本是哪个版本，在Git中，用HEAD表示当前版本，也就是最新的提交1094adb...（注意我的提交ID和你的肯定不一样），上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。
+现在，我们要把当前版本append GPL回退到上一个版本add distributed，就可以使用git reset命令：
+ cat readme.txt查看文件内容
+
+git reset --hard 1094a  可以指定回到未来的某个版本1094a是id数字
+git reflog用来记录你的每一次命令：
+总结：
+HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令git reset --hard commit_id。
+穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。
+要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。
+git add readme.txt LICENSE.txt
+
+exit 退出
+clear清空
+
+
+远程仓库
+致命：远程来源已经存在
+此时，我们可以先 git remote -v 查看远程库信息：
+$ git remote rm origin(删除关联的origin的远程库)
+再输入现有仓库git remote add origin https://github.com/git-zhangtao/learngit.git
+Username for 'https://github.com': 输入的是github上的邮箱账号, 而不是github中设置的username, 这是个巨坑!!!
+Password for 'https://你的github邮箱@github.com': 输入github的登录密码,点击enter键即可.
+找到你的github的安装路径，我的是
+5、找到一个名为gitconfig的文件，打开它把里面的[remote "origin"]那一行删掉就好了
+git push origin master只要本地作了提交，就可以通过命令把本地master分支的最新修改推送至GitHub，现在，你就拥有了真正的分布式版本库！
